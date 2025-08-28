@@ -38,7 +38,7 @@ resource "aws_security_group" "ec2_sg" {
 }
 resource "aws_instance" "my_ec2" {
   ami = "ami-0861f4e788f5069dd"
-  count = 3
+  count = 2
   instance_type = "t2.micro"
   key_name ="DemoKeyPair" 
   security_groups = [aws_security_group.ec2_sg.name]
